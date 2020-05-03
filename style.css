@@ -1,0 +1,18 @@
+h1{
+    background-color: #f89d13;
+    
+    
+}
+#screen{
+    background-color: #cee1e9;
+    height: 200px;
+    }
+button{
+    height: 120px;
+}
+#maschine{
+    height: 330px;
+}
+#payment,#kind-bags,#shopping-bag{
+    height: 270px;
+}
