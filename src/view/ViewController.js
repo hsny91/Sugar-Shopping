@@ -16,7 +16,11 @@ this.x=null;
   document.querySelector("#shopping-bag").innerHTML = list;
   document.querySelector("#payment").innerHTML ="Total: "+pPayment+" CHF";
  
-  if(pTotalVolume<=400)
+
+
+
+  
+  /*if(pTotalVolume<=400)
    this.x= Math.ceil (pTotalVolume/400);
   else if(pTotalVolume<=700){
     this.x= Math.floor(pTotalVolume/700);
@@ -26,7 +30,7 @@ this.x=null;
  document.querySelector("#kind-bags").innerHTML=(this.x);
 
   
- 
+ */
   
   
  

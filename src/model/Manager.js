@@ -24,7 +24,8 @@ class Manager {
 
   checkToSugar(item) {
     this.#shoppingSugarList.map((sugar) => {
-      if (item.target.id === sugar.sugarName) this.addSugarBags(sugar);
+      if (item.target.id === sugar.sugarName) 
+      this.addSugarBags(sugar);
     });
   }
 
