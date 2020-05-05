@@ -5,32 +5,26 @@ this.x=null;
   }
   viewBags(pSugarListArray,pSugarBagsList,pPayment,pTotalVolume){
   
-    let list=`<ul>`
+    let list=`<ul class="list-inline justifiy content-center">`
     pSugarListArray.map((sugar) => {
       if(sugar.sugarPiece!==0){
       list += 
-          `<li class="list-group-item list-group-item-success text-center mt-1 mr-1 ">${sugar.sugarName} ${sugar.sugarPiece} adet</li>`
+          `<li class="list-group-item list-group-item-success text-center mt-1">${sugar.sugarName} ${sugar.sugarPiece} adet</li>`
           
      } }).join(" ");
   list += `</ul>`;
   document.querySelector("#shopping-bag").innerHTML = list;
   document.querySelector("#payment").innerHTML ="Total: "+pPayment+" CHF";
  
+  let x=pSugarBagsList.map((bag)=>{
+     Math.floor (pTotalVolume/bag.bagVolume);
+   // pTotalVolume=(pTotalVolume%bag.bagVolume)
 
-
-
-  
-  /*if(pTotalVolume<=400)
-   this.x= Math.ceil (pTotalVolume/400);
-  else if(pTotalVolume<=700){
-    this.x= Math.floor(pTotalVolume/700);
-  } else{
-    this.x=Math.floor(pTotalVolume/750);
-  }
- document.querySelector("#kind-bags").innerHTML=(this.x);
+})
+console.log(x);
 
   
- */
+  
   
   
  
@@ -42,7 +36,17 @@ this.x=null;
   
    
 
+  /*if(pTotalVolume<=400)
+  this.x= Math.ceil (pTotalVolume/400);
+ else if(pTotalVolume<=700){
+   this.x= Math.floor(pTotalVolume/700);
+ } else{
+   this.x=Math.floor(pTotalVolume/750);
+ }
+document.querySelector("#kind-bags").innerHTML=(this.x);
 
+ 
+*/
 
 
 

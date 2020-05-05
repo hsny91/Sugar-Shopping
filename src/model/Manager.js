@@ -1,16 +1,16 @@
 class Manager {
   #shoppingSugarList = new SugarList().sugarList();
   #shoppingBagList = new ShoppingBag().bagList();
-  #viewAutomat = null;
-  #viewSugarBags = null;
+  viewAutomat = null;
+  viewSugarBags = null;
   #payment = null;
   #totalvolume=null;
   constructor(pViewAutomat, pViewSugarBags) {
-    this.#viewAutomat = pViewAutomat;
-    this.#viewSugarBags = pViewSugarBags;
+    this.viewAutomat = pViewAutomat;
+    this.viewSugarBags = pViewSugarBags;
   }
   start() {
-    this.#viewAutomat(this.#shoppingSugarList, this.#shoppingBagList);
+    this.viewAutomat(this.#shoppingSugarList, this.#shoppingBagList);
     this.chooseSugar();
   }
 
@@ -36,7 +36,7 @@ class Manager {
     console.log(this.#totalvolume)
     console.log(this.#shoppingSugarList);
     console.log(this.#payment);
-    this.#viewSugarBags( this.#shoppingSugarList,this.#shoppingBagList,this.#payment,this.#totalvolume);
+    this.viewSugarBags( this.#shoppingSugarList,this.#shoppingBagList,this.#payment,this.#totalvolume);
   }
 }
 

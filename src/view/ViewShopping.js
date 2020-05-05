@@ -18,7 +18,7 @@ class ViewShopping {
         </div>`
 
 
-    document.querySelector("#ilk").innerHTML = automat;
+    document.querySelector("automat").innerHTML = automat;
   }
 }
 

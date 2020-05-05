@@ -23,6 +23,8 @@ const viewShopping = new ViewShopping();
 const viewController=new ViewController();
 new Manager(viewShopping.viewAutomat,
     viewController.viewBags).start();
-
-
+/*et x=1500%750
+let y=1600/750
+console.log(x);
+console.log(y);*/
     
