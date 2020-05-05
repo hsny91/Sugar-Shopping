@@ -1,30 +1,24 @@
 
 /**
- * VETERINER
- * Uygulamada sistem rastgele olarak hayvan uretir.
- * Veteriner kliniginde calisan her doktor kendi uzmanlik alaninda olan hayvani musaitse tedavi eder.
- * Mesai bitiminde her doktorun kac hayvana baktigi ve ne kadar kazandigi kac tane hayvanin tedavi icin getirildiigi ve hayvanlarin kacinin tedavi oldugu bilgisi ekrana yazdirilir.
+ * SEKERCI DUKKANI
+ * Uygulama bir sekerci dukkaninda bulunan seker otamati olarak calismalidir.
+ * Otamata gelen musteri istedigi sekerden istedigi miktarda secebilmelidir.
+ * Musteri odeme yaptiginda Otomat satin alinan sekerlerin toplam ücretini ekranda gösterir ve sekerlerin hacimlerine göre, sekerlerin konulacagi 3 fakli büyüklükte kagit posetten hangi(sini/lerini) kullanacagina karar verir ve sekeleri o posetler ile disari cikarir.
  * 
  * ANALIZ
- * - Model OBJELERI: Animal,Doctor, Utility,Manager
- * - View OBJELERI: ViewController
+ * - Model OBJELERI:ShoppingSugar,ShoppingBag,Manager
+ * - View OBJELERI: ViewController,ViewShopping
  * 
- * Animal, tedavi edilecek hayvan turlerini ve bilgilerini olusturur.
- * Doctor,doctor isimlerini ve bilgilerini bir diziye aktarir.
- * Manager  ilk olarak gunluk tedaviye gelen hayvanlari rastgele olusturur ve bu bilgileri ViewController paylasir ve  hayvan listesi ekrar basilir.
- * Manager, doctorlarin musaitligini belirli araliklarla kontrol eder ve musait olan doktora o doktorun tedavi edebilecegi turde olan hayvani veririr.
- * Hayvanlarin tedavi masraflari, tedavi edilen hayvan sayilari doktorlarin bulundugu arraye islenir.
- * Manager, tedavisi biten hayvani taburcu eder yani hayvanlarin bulundugu diziden siler.
- * Manger, 180 sn bitiminde uygulamanin calismasini durdurur. 
- * Manager, 180 bitiminde doktorlar arrayindeki bilgileri ViewController paylasir ve sonuc ekrar basilir.
+ * ShoppingSugar,satilan sekerlerin bilgilerini olusturur. 
+ * ShoppingBag,sekerlerin konulacagi posetlerin bilgilerini olusturur.
+ * Manager uygulma ilk acildiginda ekrana gelecek olan seker otamatini viewShopping araciligi ile olusturur.
+ * Manager, uzerine tiklanan sekeri sepete atar ve tiklanan seker turu dogrultusunda sepet fiyatini ve sepetteki seker hacmini gunceller.
+ * Manager sepeti her guncellediginde ekranda yazilmasi icin ViewController clasindaki metodlari cagirir.
+ * Manager, musterinin odeme yapilmasi ile alisverisi bitirir.
  * 
  */
-const viewShopping = new ViewShopping();
-const viewController=new ViewController();
+const viewShopping = new ViewShopping();//uygulama ilk acldiginda ektranda seker otamatini gosteren classi tutan degisken.
+const viewController=new ViewController();// sepette guncellemeleri ekrana yazdiran  classi tutan degisken.
 new Manager(viewShopping.viewAutomat,
     viewController.viewBags).start();
-/*et x=1500%750
-let y=1600/750
-console.log(x);
-console.log(y);*/
-    
+

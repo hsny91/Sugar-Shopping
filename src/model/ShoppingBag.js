@@ -1,3 +1,6 @@
+/**
+ * Poset olusturuken kullanilacak class
+ */
 class Bag {
   constructor(pBagSize, pBagVolume, pBagPrice) {
     this.bagSize = pBagSize;
@@ -5,6 +8,9 @@ class Bag {
     this.bagPrice = pBagPrice;
   }
 }
+/**
+ * sekercideki kullanilan posetleri olusturan class
+ */
 class ShoppingBag {
   bagList() {
     let bags = [
